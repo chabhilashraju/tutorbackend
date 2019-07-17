@@ -1,0 +1,20 @@
+service: user-login-service
+
+provider:
+  name: aws
+  runtime: java8
+
+package:
+  artifact: build/distributions/user-login-service.zip
+
+functions:
+  tutor4meUserProfileLambda:
+    handler: com.tutor4me.user.StreamLambdaHandler::handleRequest
+    events:
+      - http:
+          path: /login/signIn
+          method: POST                   
+      - http:
+          path: /login/signUp
+          method: POST         
+    timeout: 30 
