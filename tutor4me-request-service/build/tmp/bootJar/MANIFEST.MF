@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Start-Class: com.tutor4me.request.Tutor4MeRequestServiceApplication
+Main-Class: org.springframework.boot.loader.JarLauncher
+
